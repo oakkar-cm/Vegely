@@ -41,8 +41,12 @@
 
 /* ---------- Base ---------- */
 * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+*, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
 body {
   font-family: var(--vg-font-body);
@@ -53,7 +57,21 @@ body {
     radial-gradient(900px 500px at 110% 10%, rgba(95,174,75,.12), transparent 60%),
     linear-gradient(180deg, #FDFCF7 0%, #FAF8F1 100%);
   overflow-x: hidden;
+  min-width: 0;
 }
+
+/* Defensive horizontal clip on long containers so absolute-positioned
+   decorative blobs (.amb-blob.tr etc.) never push the document wider
+   than the viewport. `overflow-x: clip` is preferred (doesn't break
+   position: sticky on descendants); fallback to hidden on older browsers. */
+.section,
+main {
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+/* Images never bust their container */
+img { max-width: 100%; height: auto; }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6,
@@ -406,11 +424,36 @@ a:hover { color: var(--vg-green-500); }
 .amb-blob.tr { width: 420px; height: 420px; top: 25%; right: -120px; background: rgba(124,194,99,.35); border-radius: 50%; }
 
 /* ---------- Stats ---------- */
-.stats-row { display: flex; gap: 1.5rem; }
-.stats-row .stat-block { padding-right: 1.5rem; }
-.stats-row .stat-block + .stat-block { border-left: 1px solid rgba(15,26,20,.08); padding-left: 1.5rem; }
-.stat-value { font-family: var(--vg-font-display); font-size: 1.5rem; font-weight: 700; color: var(--vg-ink-900); }
-.stat-label { font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--vg-ink-400); margin-top: 2px; }
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+}
+.stats-row .stat-block {
+  min-width: 0;
+  padding: 0 1.25rem;
+}
+.stats-row .stat-block:first-child { padding-left: 0; }
+.stats-row .stat-block:last-child  { padding-right: 0; }
+.stats-row .stat-block + .stat-block {
+  border-left: 1px solid rgba(15, 26, 20, .08);
+}
+.stat-value {
+  font-family: var(--vg-font-display);
+  font-size: clamp(1.15rem, 3.6vw, 1.5rem);
+  font-weight: 700;
+  color: var(--vg-ink-900);
+  line-height: 1.1;
+  white-space: nowrap;
+}
+.stat-label {
+  font-size: clamp(.55rem, 1.6vw, .68rem);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--vg-ink-400);
+  margin-top: 4px;
+  line-height: 1.3;
+}
 
 /* ---------- Featured / dish cards ---------- */
 .dish-card {
@@ -1334,12 +1377,8 @@ a:hover { color: var(--vg-green-500); }
   .hero-title { font-size: 2.1rem; line-height: 1.12; }
   .lead-soft { font-size: .92rem; }
 
-  /* Stats row stays horizontal but shrinks */
-  .stats-row { gap: .9rem; }
-  .stats-row .stat-block { padding-right: .9rem; }
-  .stats-row .stat-block + .stat-block { padding-left: .9rem; }
-  .stat-value { font-size: 1.25rem; }
-  .stat-label { font-size: .6rem; letter-spacing: .12em; }
+  /* Stats row — tighten inner padding on small phones */
+  .stats-row .stat-block { padding: 0 .65rem; }
 
   /* Hero blob a touch smaller so the image doesn't dominate the fold */
   .hero-blob { max-width: 380px; }
