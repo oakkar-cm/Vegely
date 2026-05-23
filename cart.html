@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#5FAE4B" />
+  <meta
+    name="description"
+    content="Your Vegely cart — review healthy bowls, choose a delivery slot and check out securely. Free delivery on orders above S$30 in Singapore."
+  />
+  <title>Cart &amp; Checkout — Vegely | Healthy Food Delivery, Singapore</title>
+  <link rel="icon" type="image/svg+xml" href="images/icons/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar-vegely" role="banner">
+    <div class="container">
+      <div class="nav-shell">
+        <a href="index.html" class="navbar-brand" aria-label="Vegely home">
+          <span class="brand-mark"><i class="bi bi-flower1"></i></span>
+          <span>
+            <span class="d-block">Vegely</span>
+            <span class="brand-tag d-block">Eat well · Live better</span>
+          </span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="menu.html">Menu</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="about.html#contact">Contact</a>
+        </nav>
+        <div class="d-flex align-items-center gap-2">
+          <a class="cart-chip" href="cart.html" data-cart aria-label="Cart" aria-current="page">
+            <i class="bi bi-bag-fill" style="color: var(--vg-green-700)"></i>
+            <span class="count" data-cart-count>0</span>
+          </a>
+          <a href="about.html#contact" class="btn btn-vegely d-none d-md-inline-flex">
+            Contact <i class="bi bi-arrow-right ms-1"></i>
+          </a>
+          <button class="nav-toggle d-lg-none" type="button" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>
+            <i class="bi bi-list fs-5"></i>
+          </button>
+        </div>
+      </div>
+      <div class="nav-mobile" data-nav-mobile style="display:none">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="menu.html">Menu</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link nav-link-cart" href="cart.html" aria-current="page">
+          <span><i class="bi bi-bag me-2"></i>Cart</span>
+          <span class="cart-badge-mobile" data-cart-count>0</span>
+        </a>
+        <a class="nav-link" href="about.html#contact">Contact</a>
+        <a href="#checkout" class="btn btn-vegely">
+          <i class="bi bi-bag-check me-1"></i> Go to checkout
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== PAGE HEADER ===================== -->
+    <section class="page-header position-relative" style="padding-bottom: 1.5rem">
+      <span class="amb-blob tl"></span>
+      <div class="container position-relative fade-up">
+        <span class="pill mb-3"><i class="bi bi-bag-heart"></i> Your cart</span>
+        <h1>Almost there. <span class="text-leaf">One last bite.</span></h1>
+        <p>
+          Review your bowls, pick a delivery slot, and check out securely.
+          Free delivery on orders above <strong>S$30</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== CART + SUMMARY ===================== -->
+    <section class="section pt-3" id="cart">
+      <div class="container">
+        <div class="row g-4">
+
+          <!-- LEFT: Items -->
+          <div class="col-lg-7 col-xl-8">
+            <div data-cart-root>
+              <!-- rendered by JS -->
+            </div>
+
+            <form class="promo-bar" data-promo-form>
+              <i class="bi bi-tag-fill"></i>
+              <input
+                type="text"
+                placeholder="Promo code (try VEGELY10 or MEMBER50)"
+                aria-label="Promo code"
+                autocomplete="off"
+              />
+              <button class="btn btn-vegely" type="submit">Apply</button>
+            </form>
+
+            <div class="d-flex justify-content-between align-items-center mt-4 flex-wrap gap-2">
+              <a href="menu.html" class="btn btn-pill-outline">
+                <i class="bi bi-arrow-left me-1"></i> Continue shopping
+              </a>
+              <button type="button" class="btn btn-pill-outline" data-cart-clear style="color:#B0353F">
+                <i class="bi bi-trash3 me-1"></i> Clear cart
+              </button>
+            </div>
+          </div>
+
+          <!-- RIGHT: Order summary -->
+          <div class="col-lg-5 col-xl-4">
+            <aside class="order-summary fade-up" aria-label="Order summary">
+              <h3>
+                Order summary
+                <span class="small">(<span data-summary-count>0</span> items)</span>
+              </h3>
+
+              <div class="summary-row">
+                <span>Subtotal</span>
+                <span data-summary-subtotal>S$0.00</span>
+              </div>
+              <div class="summary-row discount">
+                <span>Member discount</span>
+                <span data-summary-discount>—</span>
+              </div>
+              <div class="summary-row">
+                <span>Delivery</span>
+                <span data-summary-delivery>S$0.00</span>
+              </div>
+              <div class="summary-row">
+                <span>GST (9%)</span>
+                <span data-summary-tax>S$0.00</span>
+              </div>
+              <div class="summary-row total">
+                <span>Total</span>
+                <span data-summary-total>S$0.00</span>
+              </div>
+
+              <div class="free-hint" data-free-hint>
+                Add S$30 of bowls to unlock free delivery.
+              </div>
+
+              <label class="member-switch" for="member-toggle">
+                <input
+                  id="member-toggle"
+                  type="checkbox"
+                  class="form-check-input"
+                  role="switch"
+                  data-member-toggle
+                />
+                <span class="flex-grow-1">
+                  <strong>Vegely Member</strong>
+                  <span class="d-block">Unlock <span class="pct">50% off</span> + free delivery</span>
+                </span>
+              </label>
+
+              <a href="#checkout" class="btn btn-vegely btn-glow w-100" data-checkout-disabled>
+                Proceed to checkout <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+
+              <div class="trust-row">
+                <span><i class="bi bi-shield-check"></i> Secure checkout</span>
+                <span><i class="bi bi-truck"></i> 30-min delivery</span>
+                <span><i class="bi bi-arrow-counterclockwise"></i> Easy returns</span>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CHECKOUT FORM ===================== -->
+    <section class="section pt-0" id="checkout">
+      <div class="container">
+        <div class="row g-4">
+
+          <div class="col-lg-7 col-xl-8 fade-up">
+            <div class="contact-card">
+              <form data-checkout-form novalidate>
+
+                <!-- Step 1 -->
+                <span class="step-pill mb-3"><span class="step-num">1</span> Delivery details</span>
+                <h2 class="section-title" style="font-size: 1.6rem">Where should we send it?</h2>
+
+                <div class="row g-3 mt-2">
+                  <div class="col-md-6">
+                    <label class="form-label" for="co-name">Full name</label>
+                    <input class="form-control" id="co-name" name="name" placeholder="Your name" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="co-phone">Phone</label>
+                    <input class="form-control" type="tel" id="co-phone" name="phone" placeholder="+65 9123 4567" required />
+                  </div>
+                  <div class="col-md-8">
+                    <label class="form-label" for="co-address">Address</label>
+                    <input class="form-control" id="co-address" name="address" placeholder="8 Marina Boulevard" required />
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label" for="co-postal">Postal code</label>
+                    <input class="form-control" id="co-postal" name="postal" placeholder="018981" required pattern="[0-9]{6}" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="co-unit">Unit / floor</label>
+                    <input class="form-control" id="co-unit" name="unit" placeholder="#12-34" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="co-email">Email</label>
+                    <input class="form-control" type="email" id="co-email" name="email" placeholder="you@inbox.com" required />
+                  </div>
+                </div>
+
+                <!-- Step 2 -->
+                <span class="step-pill mt-5 mb-3"><span class="step-num">2</span> Delivery slot</span>
+                <h2 class="section-title" style="font-size: 1.6rem">When do you want it?</h2>
+
+                <div class="slot-grid mt-3">
+                  <label class="slot-option">
+                    <input type="radio" name="slot" value="asap" checked />
+                    <strong>ASAP</strong>
+                    <small>~30 minutes</small>
+                  </label>
+                  <label class="slot-option">
+                    <input type="radio" name="slot" value="lunch" />
+                    <strong>Lunch</strong>
+                    <small>12:00 — 13:30</small>
+                  </label>
+                  <label class="slot-option">
+                    <input type="radio" name="slot" value="dinner" />
+                    <strong>Dinner</strong>
+                    <small>18:00 — 19:30</small>
+                  </label>
+                  <label class="slot-option">
+                    <input type="radio" name="slot" value="late" />
+                    <strong>Late night</strong>
+                    <small>21:00 — 22:00</small>
+                  </label>
+                </div>
+
+                <!-- Step 3 -->
+                <span class="step-pill mt-5 mb-3"><span class="step-num">3</span> Payment</span>
+                <h2 class="section-title" style="font-size: 1.6rem">How would you like to pay?</h2>
+
+                <div class="payment-grid mt-3">
+                  <label class="payment-option">
+                    <input type="radio" name="payment" value="card" checked />
+                    <span class="pay-icon"><i class="bi bi-credit-card-2-front-fill"></i></span>
+                    <span>
+                      <strong>Card</strong>
+                      <small>Visa, Master, Amex</small>
+                    </span>
+                  </label>
+                  <label class="payment-option">
+                    <input type="radio" name="payment" value="paynow" />
+                    <span class="pay-icon"><i class="bi bi-qr-code"></i></span>
+                    <span>
+                      <strong>PayNow</strong>
+                      <small>Scan to pay</small>
+                    </span>
+                  </label>
+                  <label class="payment-option">
+                    <input type="radio" name="payment" value="apple" />
+                    <span class="pay-icon"><i class="bi bi-apple"></i></span>
+                    <span>
+                      <strong>Apple Pay</strong>
+                      <small>Touch to pay</small>
+                    </span>
+                  </label>
+                  <label class="payment-option">
+                    <input type="radio" name="payment" value="grab" />
+                    <span class="pay-icon"><i class="bi bi-wallet2"></i></span>
+                    <span>
+                      <strong>GrabPay</strong>
+                      <small>SG e-wallet</small>
+                    </span>
+                  </label>
+                </div>
+
+                <div class="mt-4">
+                  <label class="form-label" for="co-notes">Order notes (optional)</label>
+                  <textarea class="form-control" id="co-notes" name="notes" rows="3" placeholder="Allergies, special requests, gate code…"></textarea>
+                </div>
+
+                <div class="mt-4 d-flex flex-wrap gap-3 align-items-center">
+                  <button type="submit" class="btn btn-vegely btn-glow" data-checkout-disabled>
+                    <i class="bi bi-lock-fill me-1"></i>
+                    Place order — <span data-summary-total>S$0.00</span>
+                  </button>
+                  <span class="small text-muted-soft">
+                    <i class="bi bi-shield-check text-leaf me-1"></i>
+                    Secure checkout — 256-bit encrypted
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Side help cards -->
+          <div class="col-lg-5 col-xl-4 fade-up">
+            <div class="glass-card p-4">
+              <h3 style="font-size: 1.1rem; font-family: var(--vg-font-display); font-weight: 700">
+                Need help?
+              </h3>
+              <p class="lead-soft mt-2">Our team is online daily 8 AM — 10 PM, ready to help.</p>
+              <ul class="list-unstyled mt-3 mb-0">
+                <li class="mb-2"><i class="bi bi-telephone-fill text-leaf me-2"></i> +65 6123 4567</li>
+                <li class="mb-2"><i class="bi bi-envelope-fill text-leaf me-2"></i> hello@vegely.sg</li>
+                <li><i class="bi bi-chat-dots-fill text-leaf me-2"></i> Live chat</li>
+              </ul>
+            </div>
+
+            <div class="glass-card p-4 mt-3">
+              <h3 style="font-size: 1.1rem; font-family: var(--vg-font-display); font-weight: 700">
+                Why members love it
+              </h3>
+              <ul class="list-unstyled mt-3 mb-0">
+                <li class="d-flex align-items-start gap-2 mb-2">
+                  <i class="bi bi-check-circle-fill text-leaf mt-1"></i>
+                  <span class="small">50% off your first month — every meal.</span>
+                </li>
+                <li class="d-flex align-items-start gap-2 mb-2">
+                  <i class="bi bi-check-circle-fill text-leaf mt-1"></i>
+                  <span class="small">Free delivery, every order, no minimum.</span>
+                </li>
+                <li class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-leaf mt-1"></i>
+                  <span class="small">Members-only menu drops &amp; nutritionist plans.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glass-card p-4 mt-3 text-center">
+              <i class="bi bi-truck text-leaf" style="font-size: 1.5rem"></i>
+              <h3 class="mt-2" style="font-size: 1rem; font-family: var(--vg-font-display); font-weight: 700">
+                Carbon-neutral delivery
+              </h3>
+              <p class="small text-muted-soft mt-1 mb-0">
+                Every order is offset and packed in 100% compostable materials.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="row g-5 pb-5 border-bottom border-secondary border-opacity-25">
+        <div class="col-lg-5">
+          <h2 class="text-white" style="font-size: clamp(1.6rem, 3vw, 2.4rem)">
+            Join the table.
+            <span style="color: var(--vg-green-300)">Eat well, weekly.</span>
+          </h2>
+          <p class="small-muted mt-3" style="max-width: 32rem">
+            Recipes, members-only drops and gentle nudges toward healthier habits —
+            straight from our chefs to your inbox.
+          </p>
+        </div>
+        <div class="col-lg-7 d-flex align-items-end">
+          <form class="footer-newsletter w-100" data-newsletter>
+            <input type="email" required placeholder="you@inbox.com" aria-label="Email" />
+            <button class="btn btn-vegely" type="submit">
+              Subscribe <i class="bi bi-arrow-right ms-1"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="row g-5 py-5">
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html" class="d-inline-flex align-items-center gap-2 text-white text-decoration-none">
+            <span class="brand-mark"><i class="bi bi-flower1"></i></span>
+            <span style="font-family: var(--vg-font-display); font-weight: 700; font-size: 1.1rem">Vegely</span>
+          </a>
+          <p class="small-muted mt-3" style="max-width: 28ch">
+            Premium healthy food crafted by chefs and nutritionists. Real ingredients. Real care.
+          </p>
+          <div class="social-row">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h6>Menu</h6>
+          <ul>
+            <li><a href="menu.html#bowls">Healthy bowls</a></li>
+            <li><a href="menu.html#salads">Salads</a></li>
+            <li><a href="menu.html#protein">Protein meals</a></li>
+            <li><a href="menu.html#smoothies">Smoothies</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h6>Order</h6>
+          <ul>
+            <li><a href="cart.html">Your cart</a></li>
+            <li><a href="cart.html#checkout">Checkout</a></li>
+            <li><a href="about.html#contact">Help &amp; FAQ</a></li>
+            <li><a href="about.html#contact">Track order</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h6>Contact</h6>
+          <ul class="small-muted">
+            <li><i class="bi bi-geo-alt-fill text-leaf me-2"></i> 8 Marina Boulevard, Singapore 018981</li>
+            <li><i class="bi bi-telephone-fill text-leaf me-2"></i> +65 6123 4567</li>
+            <li><i class="bi bi-envelope-fill text-leaf me-2"></i> hello@vegely.sg</li>
+            <li><i class="bi bi-clock-fill text-leaf me-2"></i> Daily · 8:00 — 22:00</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-base">
+        <p class="small-muted mb-0">
+          © <span data-year>2026</span> Vegely Pte. Ltd. — Crafted with care in Singapore.
+        </p>
+        <div class="d-flex gap-4 small-muted">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== ORDER CONFIRM MODAL ===================== -->
+  <div class="modal modal-confirm fade" id="orderConfirmModal" tabindex="-1" aria-labelledby="orderConfirmTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="order-hero">
+          <div class="order-icon"><i class="bi bi-check-lg"></i></div>
+          <span class="text-eyebrow d-block">Order confirmed</span>
+          <h2 id="orderConfirmTitle" class="mt-1">
+            Thank you, <span data-order-name>You</span>!
+          </h2>
+          <p class="lead-soft mx-auto mt-2" style="max-width: 32em">
+            Your order is in the kitchen. We'll text you when the rider is on the way.
+          </p>
+        </div>
+
+        <div class="order-meta">
+          <div class="item">
+            <div class="lbl">Order #</div>
+            <div class="val" data-order-number>VG-XXXXXX</div>
+          </div>
+          <div class="item">
+            <div class="lbl">Items</div>
+            <div class="val" data-order-items>0 items</div>
+          </div>
+          <div class="item">
+            <div class="lbl">Total</div>
+            <div class="val" data-order-total>S$0.00</div>
+          </div>
+          <div class="item">
+            <div class="lbl">ETA</div>
+            <div class="val" data-order-eta>—</div>
+          </div>
+        </div>
+
+        <div class="px-4">
+          <p class="small text-muted-soft mb-0">
+            <i class="bi bi-geo-alt-fill text-leaf me-1"></i>
+            Delivering to <strong data-order-address>your address</strong>
+          </p>
+        </div>
+
+        <div class="order-foot">
+          <a href="menu.html" class="btn btn-pill-outline">Order again</a>
+          <a href="index.html" class="btn btn-vegely">
+            Back to home <i class="bi bi-arrow-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="cart-toast" data-cart-toast role="status" aria-live="polite">
+    <i class="bi bi-bag-check-fill"></i>
+    <span data-cart-toast-msg>Added to cart</span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

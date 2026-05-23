@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#5FAE4B" />
+  <meta
+    name="description"
+    content="The story behind Vegely — a Singapore healthy food delivery startup. Meet our founders, chefs and nutritionists, read customer reviews, or get in touch."
+  />
+  <title>About — Vegely | Healthy Food Delivery, Singapore</title>
+  <link rel="icon" type="image/svg+xml" href="images/icons/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar-vegely" role="banner">
+    <div class="container">
+      <div class="nav-shell">
+        <a href="index.html" class="navbar-brand" aria-label="Vegely home">
+          <span class="brand-mark"><i class="bi bi-flower1"></i></span>
+          <span>
+            <span class="d-block">Vegely</span>
+            <span class="brand-tag d-block">Eat well · Live better</span>
+          </span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="menu.html">Menu</a>
+          <a class="nav-link active" href="about.html">About</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+        <div class="d-flex align-items-center gap-2">
+          <a class="cart-chip" href="cart.html" data-cart aria-label="Cart">
+            <i class="bi bi-bag"></i>
+            <span class="count" data-cart-count>0</span>
+          </a>
+          <a href="#contact" class="btn btn-vegely d-none d-md-inline-flex">
+            Contact <i class="bi bi-arrow-right ms-1"></i>
+          </a>
+          <button class="nav-toggle d-lg-none" type="button" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>
+            <i class="bi bi-list fs-5"></i>
+          </button>
+        </div>
+      </div>
+      <div class="nav-mobile" data-nav-mobile style="display:none">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="menu.html">Menu</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link nav-link-cart" href="cart.html">
+          <span><i class="bi bi-bag me-2"></i>Cart</span>
+          <span class="cart-badge-mobile" data-cart-count>0</span>
+        </a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <a href="cart.html" class="btn btn-vegely">
+          <i class="bi bi-bag-check me-1"></i> View cart &amp; checkout
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== PAGE HEADER ===================== -->
+    <section class="page-header position-relative">
+      <span class="amb-blob tl"></span>
+      <div class="container position-relative fade-up">
+        <span class="pill mb-3"><span class="dot"></span> Our story · Singapore, since 2024</span>
+        <h1>Real food, real care — <br><span class="text-leaf">made by people who love it.</span></h1>
+        <p>
+          Vegely started in a small Tiong Bahru kitchen with one belief:
+          healthy eating should never feel like a compromise on taste, design, or convenience.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== STORY ===================== -->
+    <section class="section pt-2" id="story">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6 fade-up">
+            <div class="about-hero-img">
+              <img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=900&q=85" alt="Fresh produce arranged on a wooden table" />
+            </div>
+          </div>
+          <div class="col-lg-6 fade-up">
+            <span class="pill mb-3"><span class="dot"></span> Our story</span>
+            <h2 class="section-title">From a home kitchen to <span class="text-leaf">all of Singapore.</span></h2>
+            <p class="lead-soft mt-3">
+              In 2024, our founder Aisha was juggling a startup job, a half-marathon programme, and the
+              endless quest for a lunch that wouldn't wreck either. She started cooking weekly meal-preps
+              for friends — and within a month, the WhatsApp group had grown from 4 friends to 140 strangers.
+            </p>
+            <p class="lead-soft">
+              Today, <strong>Vegely</strong> is a full Singapore healthy-food delivery service: chef-crafted bowls,
+              farm-to-bowl produce, nutritionist-balanced macros, and a delivery network that reaches
+              every postcode on the island — usually within 30 minutes of leaving our kitchen.
+            </p>
+
+            <div class="row g-3 mt-4">
+              <div class="col-6">
+                <div class="glass-card p-3 text-center">
+                  <div class="stat-value">12,400+</div>
+                  <div class="stat-label">Happy customers</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="glass-card p-3 text-center">
+                  <div class="stat-value">120+</div>
+                  <div class="stat-label">Signature dishes</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MISSION ===================== -->
+    <section class="section pt-0">
+      <div class="container">
+        <div class="glass-card p-4 p-lg-5 fade-up text-center">
+          <span class="pill mx-auto mb-3"><i class="bi bi-stars"></i> Our mission</span>
+          <h2 class="section-title mx-auto" style="max-width: 22ch">
+            To make healthy eating the <span class="text-leaf">easiest, tastiest</span> choice in Singapore.
+          </h2>
+          <p class="lead-soft mx-auto mt-3">
+            We believe wellness shouldn't feel like punishment. Every Vegely meal is built around three
+            non-negotiables — locally sourced ingredients, balanced macros, and joyful flavour — so eating
+            well becomes the obvious daily choice, not the difficult one.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TEAM ===================== -->
+    <section class="section pt-0" id="team">
+      <div class="container">
+        <div class="row align-items-end g-3 mb-5">
+          <div class="col-lg-7 fade-up">
+            <span class="pill mb-3"><span class="dot"></span> The team</span>
+            <h2 class="section-title">
+              Chefs, nutritionists & operators —
+              <span class="text-leaf">obsessed with the details.</span>
+            </h2>
+          </div>
+          <div class="col-lg-5 fade-up">
+            <p class="lead-soft mb-0">
+              We're a small, proudly cross-disciplinary team — half kitchen, half lab, all heart.
+              Every recipe goes through 4 weeks of testing before it earns a spot on the menu.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3 fade-up">
+            <article class="team-card">
+              <div class="img-wrap">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=85" alt="Aisha Rahman" />
+              </div>
+              <div class="body">
+                <div class="role">Founder · CEO</div>
+                <h3>Aisha Rahman</h3>
+                <p>Ex-product designer turned founder. Believes Excel sheets and balanced macros are equally beautiful.</p>
+                <div class="socials">
+                  <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-3 fade-up">
+            <article class="team-card">
+              <div class="img-wrap">
+                <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=600&q=85" alt="Marco Bellini" />
+              </div>
+              <div class="body">
+                <div class="role">Head Chef</div>
+                <h3>Marco Bellini</h3>
+                <p>Michelin-trained, Italian-born. Twelve years of fine dining, now plating wellness on cardboard.</p>
+                <div class="socials">
+                  <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-3 fade-up">
+            <article class="team-card">
+              <div class="img-wrap">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=600&q=85" alt="Olivia Chen" />
+              </div>
+              <div class="body">
+                <div class="role">Lead Nutritionist</div>
+                <h3>Olivia Chen</h3>
+                <p>RDN, sports-nutrition specialist. Builds macros for everyone from desk warriors to triathletes.</p>
+                <div class="socials">
+                  <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-3 fade-up">
+            <article class="team-card">
+              <div class="img-wrap">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=600&q=85" alt="Marcus Reid" />
+              </div>
+              <div class="body">
+                <div class="role">Head of Operations</div>
+                <h3>Marcus Reid</h3>
+                <p>Logistics nerd. Ensures every bowl reaches your door within 30 minutes — without breaking a sweat.</p>
+                <div class="socials">
+                  <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WHY CHOOSE US ===================== -->
+    <section class="section pt-0">
+      <div class="container">
+        <div class="text-center mx-auto fade-up" style="max-width: 720px">
+          <span class="pill mb-3"><span class="dot"></span> Why choose Vegely</span>
+          <h2 class="section-title">
+            Premium healthy food, <span class="text-leaf">without the trade-offs.</span>
+          </h2>
+          <p class="lead-soft mx-auto mt-3">
+            Other delivery services cut corners on sourcing, taste, or sustainability. We built Vegely
+            specifically to refuse those trade-offs.
+          </p>
+        </div>
+
+        <div class="row g-4 mt-2">
+          <div class="col-md-6 col-lg-3 fade-up">
+            <div class="feature-card">
+              <span class="feature-icon"><i class="bi bi-flower1"></i></span>
+              <h3>Farm to bowl in 24h</h3>
+              <p>Direct partnerships with Singapore's regenerative urban farms — same-day harvest, same-day plating.</p>
+              <div class="accent-bar"></div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 fade-up">
+            <div class="feature-card">
+              <span class="feature-icon amber"><i class="bi bi-stars"></i></span>
+              <h3>Chef + nutritionist</h3>
+              <p>Every menu item passes both a Michelin-trained palate and a registered nutritionist's checklist.</p>
+              <div class="accent-bar"></div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 fade-up">
+            <div class="feature-card">
+              <span class="feature-icon mint"><i class="bi bi-recycle"></i></span>
+              <h3>100% compostable</h3>
+              <p>From bowls to cutlery to delivery bags — every Vegely package is plant-based and home-compostable.</p>
+              <div class="accent-bar"></div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 fade-up">
+            <div class="feature-card">
+              <span class="feature-icon rose"><i class="bi bi-shield-check"></i></span>
+              <h3>Transparent pricing</h3>
+              <p>No surge fees, no hidden charges. The price you see is the price you pay — every order.</p>
+              <div class="accent-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="section pt-0" id="reviews">
+      <div class="container">
+        <div class="text-center mx-auto fade-up" style="max-width: 720px">
+          <span class="pill mb-3"><i class="bi bi-flower1"></i> Loved by 12,400+ foodies</span>
+          <h2 class="section-title">
+            What our regulars <span class="text-leaf">are saying.</span>
+          </h2>
+        </div>
+
+        <div class="row g-4 mt-2">
+          <div class="col-lg-4 fade-up">
+            <article class="review-card">
+              <span class="quote-mark"><i class="bi bi-quote"></i></span>
+              <div class="stars" aria-label="5 out of 5">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>“Vegely genuinely changed my mid-day energy. The bowls are beautiful, the flavours clean — and the delivery is on time, every time.”</p>
+              <div class="reviewer">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=160&q=80" alt="Olivia Chen" />
+                <div>
+                  <h4>Olivia Chen</h4>
+                  <span>Yoga instructor · Tanjong Pagar</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 fade-up">
+            <article class="review-card" style="transform: translateY(-12px)">
+              <span class="quote-mark"><i class="bi bi-quote"></i></span>
+              <div class="stars" aria-label="5 out of 5">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>“I subscribed for the macros and stayed for the taste. The beef salad is genuinely the best lunch in Singapore right now — easily.”</p>
+              <div class="reviewer">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=160&q=80" alt="Marcus Reid" />
+                <div>
+                  <h4>Marcus Reid</h4>
+                  <span>Software engineer · CBD</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 fade-up">
+            <article class="review-card">
+              <span class="quote-mark"><i class="bi bi-quote"></i></span>
+              <div class="stars" aria-label="5 out of 5">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>“It feels like a Michelin restaurant decided to do delivery — and somehow kept it healthy. Our whole office is hooked.”</p>
+              <div class="reviewer">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80" alt="Amelia Johansson" />
+                <div>
+                  <h4>Amelia Johansson</h4>
+                  <span>Founder, Northwind Studio</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT + MAP ===================== -->
+    <section class="section pt-0" id="contact">
+      <div class="container">
+        <div class="text-center mx-auto fade-up mb-5" style="max-width: 720px">
+          <span class="pill mb-3"><i class="bi bi-envelope"></i> Get in touch</span>
+          <h2 class="section-title">
+            Say hello — <span class="text-leaf">we'd love to feed you.</span>
+          </h2>
+          <p class="lead-soft mx-auto mt-3">
+            Catering, partnerships, careers, or simply a recipe question — drop us a note and
+            our team will reply within 24 hours.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-7 fade-up">
+            <div class="contact-card">
+              <form data-contact-form novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="name">Full name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Your name" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="you@inbox.com" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="phone">Phone (optional)</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="+65 9123 4567" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="topic">Topic</label>
+                    <select class="form-select" id="topic" name="topic" required>
+                      <option value="" selected disabled>Choose a topic</option>
+                      <option>General enquiry</option>
+                      <option>Catering & events</option>
+                      <option>Partnerships</option>
+                      <option>Careers</option>
+                      <option>Press</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="message">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell us a bit more…" required></textarea>
+                  </div>
+                  <div class="col-12 d-flex flex-wrap gap-2 align-items-center">
+                    <button type="submit" class="btn btn-vegely">
+                      Send message <i class="bi bi-send-fill ms-1"></i>
+                    </button>
+                    <span class="small text-muted-soft ms-md-2">
+                      <i class="bi bi-shield-check text-leaf me-1"></i>
+                      We never share your data. Cancel any time.
+                    </span>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-lg-5 fade-up">
+            <div class="map-card">
+              <iframe
+                title="Vegely Singapore HQ"
+                src="https://www.google.com/maps?q=Marina%20Boulevard%20Singapore&hl=en&z=15&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <div class="map-overlay">
+                <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
+                <div>
+                  <strong>Vegely HQ & Kitchen</strong>
+                  <div class="small text-muted-soft">8 Marina Boulevard, Singapore 018981</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-sm-6">
+                <div class="glass-card p-3">
+                  <div class="text-eyebrow">Phone</div>
+                  <div class="fw-semibold mt-1"><i class="bi bi-telephone-fill text-leaf me-1"></i> +65 6123 4567</div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="glass-card p-3">
+                  <div class="text-eyebrow">Email</div>
+                  <div class="fw-semibold mt-1"><i class="bi bi-envelope-fill text-leaf me-1"></i> hello@vegely.sg</div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="glass-card p-3 d-flex align-items-center justify-content-between">
+                  <div>
+                    <div class="text-eyebrow">Follow us</div>
+                    <div class="small text-muted-soft mt-1">Daily recipes, behind-the-scenes & member drops.</div>
+                  </div>
+                  <div class="social-row" style="margin: 0">
+                    <a href="#" aria-label="Instagram" style="background: var(--vg-cream-100); color: var(--vg-ink-700); border-color: rgba(15,26,20,.06)"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="TikTok" style="background: var(--vg-cream-100); color: var(--vg-ink-700); border-color: rgba(15,26,20,.06)"><i class="bi bi-tiktok"></i></a>
+                    <a href="#" aria-label="Twitter" style="background: var(--vg-cream-100); color: var(--vg-ink-700); border-color: rgba(15,26,20,.06)"><i class="bi bi-twitter-x"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="row g-5 pb-5 border-bottom border-secondary border-opacity-25">
+        <div class="col-lg-5">
+          <h2 class="text-white" style="font-size: clamp(1.6rem, 3vw, 2.4rem)">
+            Join the table.
+            <span style="color: var(--vg-green-300)">Eat well, weekly.</span>
+          </h2>
+          <p class="small-muted mt-3" style="max-width: 32rem">
+            Recipes, members-only drops and gentle nudges toward healthier habits —
+            straight from our chefs to your inbox.
+          </p>
+        </div>
+        <div class="col-lg-7 d-flex align-items-end">
+          <form class="footer-newsletter w-100" data-newsletter>
+            <input type="email" required placeholder="you@inbox.com" aria-label="Email" />
+            <button class="btn btn-vegely" type="submit">
+              Subscribe <i class="bi bi-arrow-right ms-1"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="row g-5 py-5">
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html" class="d-inline-flex align-items-center gap-2 text-white text-decoration-none">
+            <span class="brand-mark"><i class="bi bi-flower1"></i></span>
+            <span style="font-family: var(--vg-font-display); font-weight: 700; font-size: 1.1rem">Vegely</span>
+          </a>
+          <p class="small-muted mt-3" style="max-width: 28ch">
+            Premium healthy food crafted by chefs and nutritionists. Real ingredients. Real care.
+          </p>
+          <div class="social-row">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h6>Menu</h6>
+          <ul>
+            <li><a href="menu.html#bowls">Healthy bowls</a></li>
+            <li><a href="menu.html#salads">Salads</a></li>
+            <li><a href="menu.html#protein">Protein meals</a></li>
+            <li><a href="menu.html#smoothies">Smoothies</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h6>Order</h6>
+          <ul>
+            <li><a href="cart.html">Your cart</a></li>
+            <li><a href="cart.html#checkout">Checkout</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="about.html#contact">Help &amp; FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h6>Contact</h6>
+          <ul class="small-muted">
+            <li><i class="bi bi-geo-alt-fill text-leaf me-2"></i> 8 Marina Boulevard, Singapore 018981</li>
+            <li><i class="bi bi-telephone-fill text-leaf me-2"></i> +65 6123 4567</li>
+            <li><i class="bi bi-envelope-fill text-leaf me-2"></i> hello@vegely.sg</li>
+            <li><i class="bi bi-clock-fill text-leaf me-2"></i> Daily · 8:00 — 22:00</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-base">
+        <p class="small-muted mb-0">
+          © <span data-year>2026</span> Vegely Pte. Ltd. — Crafted with care in Singapore.
+        </p>
+        <div class="d-flex gap-4 small-muted">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cart-toast" data-cart-toast role="status" aria-live="polite">
+    <i class="bi bi-bag-check-fill"></i>
+    <span data-cart-toast-msg>Added to cart</span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Logs / dumps
+*.log
+npm-debug.log*
+
+# Build artifacts (none today, but reserve)
+dist/
+build/
+.cache/
+.parcel-cache/
+.vite/
+
+# Local node modules (project is currently CDN-only, but stay safe)
+node_modules/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Temp files
+*.tmp
+*.bak
+.smoke.ps1
+.imgcheck.ps1
+
+# Lock files for tooling we may add later
+# (uncomment if you want to ignore them)
+# package-lock.json
+# yarn.lock

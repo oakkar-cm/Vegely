@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#5FAE4B" />
+  <meta
+    name="description"
+    content="Vegely — Singapore's premium healthy food delivery. Fresh, chef-crafted bowls and salads delivered daily across the island."
+  />
+  <meta name="keywords" content="healthy food, food delivery, salad, Singapore, Vegely, vegan, plant-based, meal plans" />
+  <meta name="author" content="Vegely" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vegely — Healthy Food Delivery, Singapore" />
+  <meta property="og:description" content="Chef-crafted, nutritionist-balanced bowls delivered fresh across Singapore." />
+  <meta property="og:type" content="website" />
+
+  <title>Vegely — Healthy Food Delivery, Singapore</title>
+  <link rel="icon" type="image/svg+xml" href="images/icons/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap 5 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar-vegely" role="banner">
+    <div class="container">
+      <div class="nav-shell">
+        <a href="index.html" class="navbar-brand" aria-label="Vegely home">
+          <span class="brand-mark"><i class="bi bi-flower1"></i></span>
+          <span>
+            <span class="d-block">Vegely</span>
+            <span class="brand-tag d-block d-md-block">Eat well · Live better</span>
+          </span>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary">
+          <a class="nav-link active" href="index.html">Home</a>
+          <a class="nav-link" href="menu.html">Menu</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="about.html#contact">Contact</a>
+        </nav>
+
+        <div class="d-flex align-items-center gap-2">
+          <a class="cart-chip" href="cart.html" data-cart aria-label="Cart">
+            <i class="bi bi-bag"></i>
+            <span class="count" data-cart-count>0</span>
+          </a>
+          <a href="about.html#contact" class="btn btn-vegely d-none d-md-inline-flex">
+            Contact <i class="bi bi-arrow-right ms-1"></i>
+          </a>
+          <button
+            class="nav-toggle d-lg-none"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            data-nav-toggle
+          >
+            <i class="bi bi-list fs-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="nav-mobile" data-nav-mobile style="display:none">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="menu.html">Menu</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link nav-link-cart" href="cart.html">
+          <span><i class="bi bi-bag me-2"></i>Cart</span>
+          <span class="cart-badge-mobile" data-cart-count>0</span>
+        </a>
+        <a class="nav-link" href="about.html#contact">Contact</a>
+        <a href="cart.html" class="btn btn-vegely">
+          <i class="bi bi-bag-check me-1"></i> View cart &amp; checkout
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="section pt-5 pb-5" id="home" style="padding-top: 9rem !important;">
+      <span class="amb-blob tl"></span>
+      <span class="amb-blob tr"></span>
+
+      <div class="container position-relative">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 fade-up">
+            <span class="pill mb-4">
+              <span class="dot"></span> 100% Organic · Delivered island-wide
+            </span>
+
+            <h1 class="hero-title mb-3">
+              Healthy food to live a
+              <span class="highlight">healthier</span> life in the future.
+            </h1>
+
+            <p class="lead-soft mb-4">
+              Enjoy healthy and nutritious meals made with fresh ingredients —
+              chef-crafted, nutritionist-balanced and delivered daily across Singapore.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3 mb-4">
+              <a href="menu.html" class="btn btn-vegely">
+                Get Started <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+              <a href="menu.html" class="btn btn-ghost">
+                <i class="bi bi-play-circle-fill text-leaf me-2"></i> View Menu
+              </a>
+            </div>
+
+            <ul class="list-unstyled small fw-medium d-flex flex-wrap gap-3 mb-4">
+              <li><i class="bi bi-check-circle-fill text-leaf me-1"></i> Carbon-neutral delivery</li>
+              <li><i class="bi bi-check-circle-fill text-leaf me-1"></i> Personalised macros</li>
+              <li><i class="bi bi-check-circle-fill text-leaf me-1"></i> No additives, ever</li>
+            </ul>
+
+            <div class="stats-row pt-4 border-top border-light">
+              <div class="stat-block">
+                <div class="stat-value">120+</div>
+                <div class="stat-label">Signature dishes</div>
+              </div>
+              <div class="stat-block">
+                <div class="stat-value">4.9★</div>
+                <div class="stat-label">Avg. rating</div>
+              </div>
+              <div class="stat-block">
+                <div class="stat-value">24/7</div>
+                <div class="stat-label">Fresh delivery</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- HERO BLOB -->
+          <div class="col-lg-6 fade-up">
+            <div class="hero-blob">
+              <div class="ring-outer"></div>
+              <div class="ring-inner"></div>
+              <div class="ring-orbit"></div>
+
+              <img
+                class="hero-img"
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=85"
+                alt="Vegely signature green salad bowl with fresh greens"
+              />
+
+              <!-- Floating decorations -->
+              <svg class="float-leaf leaf-1" viewBox="0 0 200 200" aria-hidden="true">
+                <defs>
+                  <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#9FD487" />
+                    <stop offset="100%" stop-color="#3C722E" />
+                  </linearGradient>
+                </defs>
+                <path fill="url(#lg1)" d="M170 30C100 30 40 70 30 140c-2 16 6 32 22 36 60-2 110-50 122-110 2-12-2-30-4-36z" />
+                <path d="M40 170C70 130 110 100 160 80" stroke="#FDFCF7" stroke-width="3" stroke-linecap="round" fill="none" opacity=".55" />
+              </svg>
+              <svg class="float-leaf leaf-2" viewBox="0 0 200 200" aria-hidden="true">
+                <use href="#leafShape" />
+                <path fill="url(#lg1)" d="M170 30C100 30 40 70 30 140c-2 16 6 32 22 36 60-2 110-50 122-110 2-12-2-30-4-36z" />
+              </svg>
+              <svg class="float-leaf leaf-3" viewBox="0 0 200 200" aria-hidden="true">
+                <path fill="url(#lg1)" d="M170 30C100 30 40 70 30 140c-2 16 6 32 22 36 60-2 110-50 122-110 2-12-2-30-4-36z" />
+              </svg>
+
+              <span class="float-fruit float-fruit-orange"></span>
+              <span class="float-fruit float-fruit-rose"></span>
+              <span class="float-dot float-dot-green"></span>
+              <span class="float-dot float-dot-ink"></span>
+
+              <!-- Floating cards -->
+              <div class="hero-badge kcal d-none d-md-block">
+                <div class="text-eyebrow">Per bowl</div>
+                <div style="font-family: var(--vg-font-display); font-weight: 700; color: var(--vg-ink-900);">
+                  420 <span style="color: var(--vg-ink-400); font-weight: 500;">kcal</span>
+                </div>
+              </div>
+              <div class="hero-badge fresh d-none d-md-flex">
+                <span class="fresh-dot"></span>
+                <span style="font-size:.78rem;font-weight:600;color:var(--vg-ink-700)">Fresh today</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brand strip -->
+        <div class="brand-strip mt-5 pt-5 border-top border-light fade-up">
+          <span class="text-eyebrow me-3">As featured in</span>
+          <span>Forbes</span>
+          <span>BonAppétit</span>
+          <span>Wired</span>
+          <span>Vogue</span>
+          <span>TechCrunch</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SPECIAL DISHES ===================== -->
+    <section class="section" id="dishes">
+      <div class="container">
+        <div class="row align-items-end g-3 mb-5">
+          <div class="col-lg-7 fade-up">
+            <span class="pill mb-3"><span class="dot"></span> Our Special Dishes</span>
+            <h2 class="section-title">
+              Crafted by chefs.
+              <span class="text-leaf">Loved by foodies.</span>
+            </h2>
+            <p class="lead-soft mt-3">
+              Three signature bowls our regulars can't stop ordering — built around
+              seasonal greens, ethical proteins and the freshest pantry in town.
+            </p>
+          </div>
+          <div class="col-lg-5 text-lg-end fade-up">
+            <a href="menu.html" class="btn btn-pill-outline">
+              View full menu <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Green Salad -->
+          <div class="col-md-6 col-lg-4 fade-up">
+            <article class="dish-card h-100">
+              <span class="accent-blob accent-leaf"></span>
+              <div class="d-flex justify-content-between align-items-start position-relative" style="z-index:1">
+                <span class="pill"><i class="bi bi-flower1"></i> Best seller</span>
+                <span class="dish-rating"><i class="bi bi-star-fill"></i> 4.9</span>
+              </div>
+              <div class="dish-image">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=85" alt="Green salad bowl" />
+              </div>
+              <div class="dish-meta">
+                <div class="tag">Detox · Vegan</div>
+                <h3>Green Salad</h3>
+                <p>Crisp baby kale, romaine and avocado tossed in a bright lemon-tahini dressing — every bite a clean reset.</p>
+              </div>
+              <div class="dish-foot">
+                <div>
+                  <div class="price-from">From</div>
+                  <div class="price-val">S$12.50</div>
+                </div>
+                <button class="btn btn-vegely" data-add-to-cart="Green Salad">
+                  Order now <i class="bi bi-arrow-right ms-1"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Beef Salad -->
+          <div class="col-md-6 col-lg-4 fade-up">
+            <article class="dish-card h-100">
+              <span class="accent-blob accent-amber"></span>
+              <div class="d-flex justify-content-between align-items-start position-relative" style="z-index:1">
+                <span class="pill"><i class="bi bi-flower1"></i> Chef pick</span>
+                <span class="dish-rating"><i class="bi bi-star-fill"></i> 4.8</span>
+              </div>
+              <div class="dish-image">
+                <img src="https://images.unsplash.com/photo-1551248429-40975aa4de74?auto=format&fit=crop&w=600&q=85" alt="Beef salad" />
+              </div>
+              <div class="dish-meta">
+                <div class="tag">High protein · Keto</div>
+                <h3>Beef Salad</h3>
+                <p>Seared grass-fed sirloin over arugula, cherry tomatoes and shaved parmesan with a balsamic-honey glaze.</p>
+              </div>
+              <div class="dish-foot">
+                <div>
+                  <div class="price-from">From</div>
+                  <div class="price-val">S$16.80</div>
+                </div>
+                <button class="btn btn-vegely" data-add-to-cart="Beef Salad">
+                  Order now <i class="bi bi-arrow-right ms-1"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Nut Salad -->
+          <div class="col-md-6 col-lg-4 fade-up">
+            <article class="dish-card h-100">
+              <span class="accent-blob accent-mint"></span>
+              <div class="d-flex justify-content-between align-items-start position-relative" style="z-index:1">
+                <span class="pill"><i class="bi bi-flower1"></i> New</span>
+                <span class="dish-rating"><i class="bi bi-star-fill"></i> 4.9</span>
+              </div>
+              <div class="dish-image">
+                <img src="https://images.unsplash.com/photo-1607532941433-304659e8198a?auto=format&fit=crop&w=600&q=85" alt="Nut salad" />
+              </div>
+              <div class="dish-meta">
+                <div class="tag">Crunchy · Plant-based</div>
+                <h3>Nut Salad</h3>
+                <p>Roasted almonds, walnuts and pistachios on baby spinach with goat cheese and a maple-mustard drizzle.</p>
+              </div>
+              <div class="dish-foot">
+                <div>
+                  <div class="price-from">From</div>
+                  <div class="price-val">S$13.40</div>
+                </div>
+                <button class="btn btn-vegely" data-add-to-cart="Nut Salad">
+                  Order now <i class="bi bi-arrow-right ms-1"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURES ===================== -->
+    <section class="section pt-0">
+      <div class="container">
+        <div class="text-center mx-auto fade-up" style="max-width: 720px">
+          <span class="pill mb-3"><span class="dot"></span> Why Vegely</span>
+          <h2 class="section-title">
+            Real ingredients. <span class="text-leaf">Real craft.</span> Real care.
+          </h2>
+          <p class="lead-soft mx-auto mt-3">
+            We obsess over the things that make a meal genuinely better — sourcing,
+            seasoning, science. Here's what makes our bowls different.
+          </p>
+        </div>
+
+        <div class="row g-4 mt-2">
+          <div class="col-md-6 col-lg-3 fade-up">
+            <div class="feature-card">
+              <span class="feature-icon"><i class="bi bi-flower1"></i></span>
+              <h3>Locally sourced</h3>
+              <p>Greens harvested from regenerative Singapore farms — picked, washed, plated within hours.</p>
+              <div class="accent-bar"></div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 fade-up">
+            <div class="feature-card">
+              <span class="feature-icon amber"><i class="bi bi-stars"></i></span>
+              <h3>Chef-crafted</h3>
+              <p>Every recipe built by Michelin-trained chefs and balanced by certified nutritionists.</p>
+              <div class="accent-bar"></div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 fade-up">
+            <div class="feature-card">
+              <span class="feature-icon mint"><i class="bi bi-check2-circle"></i></span>
+              <h3>Clean macros</h3>
+              <p>Personalised macros, transparent ingredients. No additives, no surprises — ever.</p>
+              <div class="accent-bar"></div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 fade-up">
+            <div class="feature-card">
+              <span class="feature-icon rose"><i class="bi bi-truck"></i></span>
+              <h3>Island-wide delivery</h3>
+              <p>Carbon-neutral, time-slot delivery anywhere in Singapore — daily and dependable.</p>
+              <div class="accent-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MEMBERSHIP BANNER ===================== -->
+    <section class="section pt-0">
+      <div class="container">
+        <div class="promo-banner fade-up">
+          <span class="dots"></span>
+          <div class="row align-items-center g-4 position-relative" style="z-index:1">
+            <div class="col-lg-7">
+              <span class="pill" style="background: rgba(255,255,255,.06); color: var(--vg-green-300); border-color: rgba(255,255,255,.1)">
+                <i class="bi bi-stars"></i> Members only
+              </span>
+              <h2 class="section-title mt-3">
+                Join our membership and get
+                <span class="text-accent">50% off</span> your first month.
+              </h2>
+              <p class="lead-soft mt-3" style="color: rgba(255,255,255,.7); max-width: 38rem">
+                Unlock chef-crafted bowls, free delivery, weekly menu drops curated by our nutritionists,
+                and member-only events around Singapore. Cancel anytime.
+              </p>
+              <div class="d-flex flex-wrap gap-3 mt-4">
+                <a href="about.html#contact" class="btn btn-glow">
+                  Claim 50% discount <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+                <a href="menu.html" class="btn btn-ghost" style="background: rgba(255,255,255,.06); color: #fff; border-color: rgba(255,255,255,.15)">
+                  Browse menu
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <ul class="list-unstyled m-0">
+                <li class="d-flex align-items-start gap-3 mb-3">
+                  <span style="width:36px;height:36px;border-radius:12px;background:rgba(95,174,75,.2);color:var(--vg-green-300);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0">
+                    <i class="bi bi-check-lg"></i>
+                  </span>
+                  <div>
+                    <strong>Free island-wide delivery</strong>
+                    <div class="small" style="color: rgba(255,255,255,.6)">Every order, every day, no minimum.</div>
+                  </div>
+                </li>
+                <li class="d-flex align-items-start gap-3 mb-3">
+                  <span style="width:36px;height:36px;border-radius:12px;background:rgba(95,174,75,.2);color:var(--vg-green-300);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0">
+                    <i class="bi bi-check-lg"></i>
+                  </span>
+                  <div>
+                    <strong>Personalised macros</strong>
+                    <div class="small" style="color: rgba(255,255,255,.6)">Built around your goals by our nutritionists.</div>
+                  </div>
+                </li>
+                <li class="d-flex align-items-start gap-3">
+                  <span style="width:36px;height:36px;border-radius:12px;background:rgba(95,174,75,.2);color:var(--vg-green-300);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0">
+                    <i class="bi bi-check-lg"></i>
+                  </span>
+                  <div>
+                    <strong>Members-only menu drops</strong>
+                    <div class="small" style="color: rgba(255,255,255,.6)">Seasonal bowls before anyone else.</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-inner">
+      <div class="row g-5 pb-5 border-bottom border-secondary border-opacity-25">
+        <div class="col-lg-5">
+          <h2 class="text-white" style="font-size: clamp(1.6rem, 3vw, 2.4rem)">
+            Join the table.
+            <span style="color: var(--vg-green-300)">Eat well, weekly.</span>
+          </h2>
+          <p class="small-muted mt-3" style="max-width: 32rem">
+            Recipes, members-only drops and gentle nudges toward healthier habits —
+            straight from our chefs to your inbox.
+          </p>
+        </div>
+        <div class="col-lg-7 d-flex align-items-end">
+          <form class="footer-newsletter w-100" data-newsletter>
+            <input type="email" required placeholder="you@inbox.com" aria-label="Email" />
+            <button class="btn btn-vegely" type="submit">
+              Subscribe <i class="bi bi-arrow-right ms-1"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="row g-5 py-5">
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html" class="d-inline-flex align-items-center gap-2 text-white text-decoration-none">
+            <span class="brand-mark"><i class="bi bi-flower1"></i></span>
+            <span style="font-family: var(--vg-font-display); font-weight: 700; font-size: 1.1rem">Vegely</span>
+          </a>
+          <p class="small-muted mt-3" style="max-width: 28ch">
+            Premium healthy food crafted by chefs and nutritionists. Real ingredients. Real care.
+          </p>
+          <div class="social-row">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h6>Menu</h6>
+          <ul>
+            <li><a href="menu.html#bowls">Healthy bowls</a></li>
+            <li><a href="menu.html#salads">Salads</a></li>
+            <li><a href="menu.html#protein">Protein meals</a></li>
+            <li><a href="menu.html#smoothies">Smoothies</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h6>Order</h6>
+          <ul>
+            <li><a href="cart.html">Your cart</a></li>
+            <li><a href="cart.html#checkout">Checkout</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="about.html#contact">Help &amp; FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h6>Contact</h6>
+          <ul class="small-muted">
+            <li><i class="bi bi-geo-alt-fill text-leaf me-2"></i> 8 Marina Boulevard, Singapore 018981</li>
+            <li><i class="bi bi-telephone-fill text-leaf me-2"></i> +65 6123 4567</li>
+            <li><i class="bi bi-envelope-fill text-leaf me-2"></i> hello@vegely.sg</li>
+            <li><i class="bi bi-clock-fill text-leaf me-2"></i> Daily · 8:00 — 22:00</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-base">
+        <p class="small-muted mb-0">
+          © <span data-year>2026</span> Vegely Pte. Ltd. — Crafted with care in Singapore.
+        </p>
+        <div class="d-flex gap-4 small-muted">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart toast -->
+  <div class="cart-toast" data-cart-toast role="status" aria-live="polite">
+    <i class="bi bi-bag-check-fill"></i>
+    <span data-cart-toast-msg>Added to cart</span>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

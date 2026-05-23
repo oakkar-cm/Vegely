@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#5FAE4B" />
+  <meta
+    name="description"
+    content="Browse Vegely's full menu — healthy bowls, salads, protein meals and smoothies, made fresh and delivered across Singapore."
+  />
+  <title>Menu — Vegely | Healthy Food Delivery, Singapore</title>
+  <link rel="icon" type="image/svg+xml" href="images/icons/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar-vegely" role="banner">
+    <div class="container">
+      <div class="nav-shell">
+        <a href="index.html" class="navbar-brand" aria-label="Vegely home">
+          <span class="brand-mark"><i class="bi bi-flower1"></i></span>
+          <span>
+            <span class="d-block">Vegely</span>
+            <span class="brand-tag d-block">Eat well · Live better</span>
+          </span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link active" href="menu.html">Menu</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="about.html#contact">Contact</a>
+        </nav>
+        <div class="d-flex align-items-center gap-2">
+          <a class="cart-chip" href="cart.html" data-cart aria-label="Cart">
+            <i class="bi bi-bag"></i>
+            <span class="count" data-cart-count>0</span>
+          </a>
+          <a href="about.html#contact" class="btn btn-vegely d-none d-md-inline-flex">
+            Contact <i class="bi bi-arrow-right ms-1"></i>
+          </a>
+          <button class="nav-toggle d-lg-none" type="button" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>
+            <i class="bi bi-list fs-5"></i>
+          </button>
+        </div>
+      </div>
+      <div class="nav-mobile" data-nav-mobile style="display:none">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="menu.html">Menu</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link nav-link-cart" href="cart.html">
+          <span><i class="bi bi-bag me-2"></i>Cart</span>
+          <span class="cart-badge-mobile" data-cart-count>0</span>
+        </a>
+        <a class="nav-link" href="about.html#contact">Contact</a>
+        <a href="cart.html" class="btn btn-vegely">
+          <i class="bi bi-bag-check me-1"></i> View cart &amp; checkout
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== PAGE HEADER ===================== -->
+    <section class="page-header position-relative">
+      <span class="amb-blob tl"></span>
+      <div class="container position-relative fade-up">
+        <span class="pill mb-3"><span class="dot"></span> Today's menu · Updated daily</span>
+        <h1>The full <span class="text-leaf">Vegely</span> menu.</h1>
+        <p>
+          Bowls, salads, proteins and smoothies — every dish portioned by chefs,
+          balanced by nutritionists, and delivered fresh across Singapore.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== CATEGORY TABS ===================== -->
+    <section class="pt-2 pb-4">
+      <div class="container">
+        <div class="menu-tabs fade-up">
+          <button class="tab-pill active" data-menu-tab="all">
+            <i class="bi bi-grid"></i> All <span class="count">12</span>
+          </button>
+          <button class="tab-pill" data-menu-tab="bowls">
+            <i class="bi bi-cup-hot"></i> Healthy bowls <span class="count">3</span>
+          </button>
+          <button class="tab-pill" data-menu-tab="salads">
+            <i class="bi bi-flower1"></i> Salads <span class="count">3</span>
+          </button>
+          <button class="tab-pill" data-menu-tab="protein">
+            <i class="bi bi-egg-fried"></i> Protein meals <span class="count">3</span>
+          </button>
+          <button class="tab-pill" data-menu-tab="smoothies">
+            <i class="bi bi-cup-straw"></i> Smoothies <span class="count">3</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MENU GRID ===================== -->
+    <section class="section pt-3" id="bowls">
+      <div class="container">
+        <div class="row g-4">
+
+          <!-- ====== BOWLS ====== -->
+          <div class="col-md-6 col-lg-4 fade-up" data-menu-item data-category="bowls">
+            <article class="menu-card">
+              <div class="img-wrap">
+                <span class="badge-cat">Bowl</span>
+                <span class="badge-kcal">480 kcal</span>
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=85" alt="Buddha bowl" />
+              </div>
+              <div class="body">
+                <h3>Buddha Bowl</h3>
+                <p>Quinoa, roasted sweet potato, edamame, kale and a creamy miso-tahini drizzle.</p>
+                <div class="foot">
+                  <div class="price">S$14.50 <small>per bowl</small></div>
+                  <button class="btn btn-vegely" data-add-to-cart="Buddha Bowl">
+                    <i class="bi bi-plus-lg me-1"></i> Add
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 fade-up" data-menu-item data-category="bowls">
+            <article class="menu-card">
+              <div class="img-wrap">
+                <span class="badge-cat">Bowl</span>
+                <span class="badge-kcal">520 kcal</span>
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=800&q=85" alt="Poke bowl" />
+              </div>
+              <div class="body">
+                <h3>Salmon Poké Bowl</h3>
+                <p>Sushi-grade salmon, brown rice, avocado, edamame, mango and ponzu glaze.</p>
+                <div class="foot">
+                  <div class="price">S$17.80 <small>per bowl</small></div>
+                  <button class="btn btn-vegely" data-add-to-cart="Salmon Poké Bowl">
+                    <i class="bi bi-plus-lg me-1"></i> Add
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 fade-up" data-menu-item data-category="bowls">
+            <article class="menu-card">
+              <div class="img-wrap">
+                <span class="badge-cat">Bowl</span>
+                <span class="badge-kcal">450 kcal</span>
+                <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=800&q=85" alt="Acai bowl" />
+              </div>
+              <div class="body">
+                <h3>Açaí Sunrise Bowl</h3>
+                <p>Acai, frozen banana and berries topped with granola, chia and coconut shavings.</p>
+                <div class="foot">
+                  <div class="price">S$13.20 <small>per bowl</small></div>
+                  <button class="btn btn-vegely" data-add-to-cart="Açaí Sunrise Bowl">
+                    <i class="bi bi-plus-lg me-1"></i> Add
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- ====== SALADS ====== -->
+          <div id="salads"></div>
+          <div class="col-md-6 col-lg-4 fade-up" data-menu-item data-category="salads">
+            <article class="menu-card">
+              <div class="img-wrap">
+                <span class="badge-cat">Salad</span>
+                <span class="badge-kcal">320 kcal</span>
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=85" alt="Green salad" />
+              </div>
+              <div class="body">
+                <h3>Green Salad</h3>
+                <p>Crisp baby kale, romaine and avocado in a bright lemon-tahini dressing.</p>
+                <div class="foot">
+                  <div class="price">S$12.50 <small>per portion</small></div>
+                  <button class="btn btn-vegely" data-add-to-cart="Green Salad">
+                    <i class="bi bi-plus-lg me-1"></i> Add
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 fade-up" data-menu-item data-category="salads">
+            <article class="menu-card">
+              <div class="img-wrap">
+                <span class="badge-cat">Salad</span>
+                <span class="badge-kcal">410 kcal</span>
+                <img src="https://images.unsplash.com/photo-1551248429-40975aa4de74?auto=format&fit=crop&w=800&q=85" alt="Beef salad" />
+              </div>
+              <div class="body">
+                <h3>Beef Salad</h3>
+                <p>Seared grass-fed sirloin, arugula, cherry tomatoes and balsamic-honey glaze.</p>
+                <div class="foot">
+                  <div class="price">S$16.80 <small>per portion</small></div>
+                  <button class="btn btn-vegely" data-add-to-cart="Beef Salad">
+                    <i class="bi bi-plus-lg me-1"></i> Add
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 fade-up" data-menu-item data-category="salads">
+            <article class="menu-card">
+              <div class="img-wrap">
+                <span class="badge-cat">Salad</span>
+                <span class="badge-kcal">380 kcal</span>
+                <img src="https://images.unsplash.com/photo-1607532941433-304659e8198a?auto=format&fit=crop&w=800&q=85" alt="Nut salad" />
+              </div>
+              <div class="body">
+                <h3>Nut Salad</h3>
+                <p>Roasted almonds, walnuts and pistachios on baby spinach with goat cheese.</p>
+                <div class="foot">
+                  <div class="price">S$13.40 <small>per portion</small></div>
+                  <button class="btn btn-vegely" data-add-to-cart="Nut Salad">
+                    <i class="bi bi-plus-lg me-1"></i> Add
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- ====== PROTEIN ====== -->
+          <div id="protein"></div>
+          <div class="col-md-6 col-lg-4 fade-up" data-menu-item data-category="protein">
+            <article class="menu-card">
+              <div class="img-wrap">
+                <span class="badge-cat">Protein</span>
+                <span class="badge-kcal">560 kcal</span>
+                <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=800&q=85" alt="Grilled salmon" />
+              </div>
+              <div class="body">
+                <h3>Grilled Salmon Plate</h3>
+                <p>Atlantic salmon, charred broccolini, lemon-herb quinoa and yogurt drizzle.</p>
+                <div class="foot">
+                  <div class="price">S$19.50 <small>per plate</small></div>
+                  <button class="btn btn-vegely" data-add-to-cart="Grilled Salmon Plate">
+                    <i class="bi bi-plus-lg me-1"></i> Add
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 fade-up" data-menu-item data-category="protein">
+            <article class="menu-card">
+              <div class="img-wrap">
+                <span class="badge-cat">Protein</span>
+                <span class="badge-kcal">620 kcal</span>
+                <img src="https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&w=800&q=85" alt="Chicken meal" />
+              </div>
+              <div class="body">
+                <h3>Lemon Herb Chicken</h3>
+                <p>Free-range chicken breast, roasted veg, wild rice and chimichurri.</p>
+                <div class="foot">
+                  <div class="price">S$16.20 <small>per plate</small></div>
+                  <button class="btn btn-vegely" data-add-to-cart="Lemon Herb Chicken">
+                    <i class="bi bi-plus-lg me-1"></i> Add
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 fade-up" data-menu-item data-category="protein">
+            <article class="menu-card">
+              <div class="img-wrap">
+                <span class="badge-cat">Protein</span>
+                <span class="badge-kcal">540 kcal</span>
+                <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=85" alt="Tofu plate" />
+              </div>
+              <div class="body">
+                <h3>Sesame Tofu Plate</h3>
+                <p>Crispy organic tofu, sesame greens, brown rice and ginger-soy glaze.</p>
+                <div class="foot">
+                  <div class="price">S$14.90 <small>per plate</small></div>
+                  <button class="btn btn-vegely" data-add-to-cart="Sesame Tofu Plate">
+                    <i class="bi bi-plus-lg me-1"></i> Add
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- ====== SMOOTHIES ====== -->
+          <div id="smoothies"></div>
+          <div class="col-md-6 col-lg-4 fade-up" data-menu-item data-category="smoothies">
+            <article class="menu-card">
+              <div class="img-wrap">
+                <span class="badge-cat">Smoothie</span>
+                <span class="badge-kcal">240 kcal</span>
+                <img src="https://images.unsplash.com/photo-1502741224143-90386d7f8c82?auto=format&fit=crop&w=800&q=85" alt="Green smoothie" />
+              </div>
+              <div class="body">
+                <h3>Green Reset</h3>
+                <p>Spinach, banana, mango, ginger, lime and a splash of coconut water.</p>
+                <div class="foot">
+                  <div class="price">S$8.90 <small>500 ml</small></div>
+                  <button class="btn btn-vegely" data-add-to-cart="Green Reset">
+                    <i class="bi bi-plus-lg me-1"></i> Add
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 fade-up" data-menu-item data-category="smoothies">
+            <article class="menu-card">
+              <div class="img-wrap">
+                <span class="badge-cat">Smoothie</span>
+                <span class="badge-kcal">280 kcal</span>
+                <img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=800&q=85" alt="Berry smoothie" />
+              </div>
+              <div class="body">
+                <h3>Berry Antioxidant</h3>
+                <p>Acai, blueberries, raspberries, banana and almond milk — pure recovery.</p>
+                <div class="foot">
+                  <div class="price">S$9.40 <small>500 ml</small></div>
+                  <button class="btn btn-vegely" data-add-to-cart="Berry Antioxidant">
+                    <i class="bi bi-plus-lg me-1"></i> Add
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 fade-up" data-menu-item data-category="smoothies">
+            <article class="menu-card">
+              <div class="img-wrap">
+                <span class="badge-cat">Smoothie</span>
+                <span class="badge-kcal">320 kcal</span>
+                <img src="https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?auto=format&fit=crop&w=800&q=85" alt="Protein smoothie" />
+              </div>
+              <div class="body">
+                <h3>Tropical Protein</h3>
+                <p>Whey isolate, mango, pineapple, banana and oat milk — 28g protein.</p>
+                <div class="foot">
+                  <div class="price">S$10.20 <small>500 ml</small></div>
+                  <button class="btn btn-vegely" data-add-to-cart="Tropical Protein">
+                    <i class="bi bi-plus-lg me-1"></i> Add
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA BAND ===================== -->
+    <section class="section pt-0">
+      <div class="container">
+        <div class="promo-banner fade-up">
+          <span class="dots"></span>
+          <div class="row align-items-center g-4 position-relative" style="z-index:1">
+            <div class="col-lg-8">
+              <span class="pill" style="background: rgba(255,255,255,.06); color: var(--vg-green-300); border-color: rgba(255,255,255,.1)">
+                <i class="bi bi-lightning-charge-fill"></i> Lunch in 30 minutes
+              </span>
+              <h2 class="section-title mt-3 text-white">
+                Hungry now? <span class="text-accent">Order in seconds.</span>
+              </h2>
+              <p class="lead-soft mt-3" style="color: rgba(255,255,255,.7)">
+                Free delivery anywhere in Singapore on orders above S$30. Use code
+                <strong style="color:#fff">VEGELY10</strong> for 10% off your first order.
+              </p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <a href="#" class="btn btn-glow">
+                Start order <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="row g-5 pb-5 border-bottom border-secondary border-opacity-25">
+        <div class="col-lg-5">
+          <h2 class="text-white" style="font-size: clamp(1.6rem, 3vw, 2.4rem)">
+            Join the table.
+            <span style="color: var(--vg-green-300)">Eat well, weekly.</span>
+          </h2>
+          <p class="small-muted mt-3" style="max-width: 32rem">
+            Recipes, members-only drops and gentle nudges toward healthier habits —
+            straight from our chefs to your inbox.
+          </p>
+        </div>
+        <div class="col-lg-7 d-flex align-items-end">
+          <form class="footer-newsletter w-100" data-newsletter>
+            <input type="email" required placeholder="you@inbox.com" aria-label="Email" />
+            <button class="btn btn-vegely" type="submit">
+              Subscribe <i class="bi bi-arrow-right ms-1"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="row g-5 py-5">
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html" class="d-inline-flex align-items-center gap-2 text-white text-decoration-none">
+            <span class="brand-mark"><i class="bi bi-flower1"></i></span>
+            <span style="font-family: var(--vg-font-display); font-weight: 700; font-size: 1.1rem">Vegely</span>
+          </a>
+          <p class="small-muted mt-3" style="max-width: 28ch">
+            Premium healthy food crafted by chefs and nutritionists. Real ingredients. Real care.
+          </p>
+          <div class="social-row">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h6>Menu</h6>
+          <ul>
+            <li><a href="menu.html#bowls">Healthy bowls</a></li>
+            <li><a href="menu.html#salads">Salads</a></li>
+            <li><a href="menu.html#protein">Protein meals</a></li>
+            <li><a href="menu.html#smoothies">Smoothies</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h6>Order</h6>
+          <ul>
+            <li><a href="cart.html">Your cart</a></li>
+            <li><a href="cart.html#checkout">Checkout</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="about.html#contact">Help &amp; FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h6>Contact</h6>
+          <ul class="small-muted">
+            <li><i class="bi bi-geo-alt-fill text-leaf me-2"></i> 8 Marina Boulevard, Singapore 018981</li>
+            <li><i class="bi bi-telephone-fill text-leaf me-2"></i> +65 6123 4567</li>
+            <li><i class="bi bi-envelope-fill text-leaf me-2"></i> hello@vegely.sg</li>
+            <li><i class="bi bi-clock-fill text-leaf me-2"></i> Daily · 8:00 — 22:00</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-base">
+        <p class="small-muted mb-0">
+          © <span data-year>2026</span> Vegely Pte. Ltd. — Crafted with care in Singapore.
+        </p>
+        <div class="d-flex gap-4 small-muted">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cart-toast" data-cart-toast role="status" aria-live="polite">
+    <i class="bi bi-bag-check-fill"></i>
+    <span data-cart-toast-msg>Added to cart</span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
