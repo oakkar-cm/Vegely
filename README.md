@@ -103,6 +103,5 @@ The site is structured to clearly explain a startup idea:
 
 ## Credits
 
-Food and people photography is hot-linked from [Unsplash](https://unsplash.com) for
-convenience. Replace with your own photos for production by following
-`images/README.md`.
+Food and people photography is stored locally under `images/` (originally sourced from
+[Unsplash](https://unsplash.com)). See `images/README.md` for the file layout.
